@@ -2,7 +2,7 @@
 
 context('Navigation', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:8080')
+    cy.visit('https://example.cypress.io')
     cy.get('.navbar-nav').contains('Commands').click()
     cy.get('.dropdown-menu').contains('Navigation').click()
   })
@@ -40,9 +40,8 @@ context('Navigation', () => {
 
     // Visit any sub-domain of your current domain
 
-    /* eslint-disable no-unused-vars */
     // Pass options to the visit
-    cy.visit('http://localhost:8080/commands/navigation', {
+    cy.visit('https://example.cypress.io/commands/navigation', {
       timeout: 50000, // increase total time for the visit to resolve
       onBeforeLoad (contentWindow) {
         // contentWindow is the remote page's window object
@@ -53,6 +52,5 @@ context('Navigation', () => {
         expect(typeof contentWindow === 'object').to.be.true
       },
     })
-    /* eslint-enable no-unused-vars */
   })
 })

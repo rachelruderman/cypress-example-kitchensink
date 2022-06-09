@@ -2,7 +2,7 @@
 
 context('Viewport', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:8080/commands/viewport')
+    cy.visit('https://example.cypress.io/commands/viewport')
   })
 
   it('cy.viewport() - set the viewport size and dimension', () => {
@@ -54,6 +54,6 @@ context('Viewport', () => {
     cy.wait(200)
 
     // The viewport will be reset back to the default dimensions
-    // in between tests (the  default can be set in cypress.json)
+    // in between tests (the  default can be set in cypress.config.{js|ts})
   })
 })

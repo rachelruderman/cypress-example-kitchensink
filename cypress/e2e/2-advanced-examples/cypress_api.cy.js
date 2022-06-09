@@ -2,7 +2,7 @@
 
 context('Cypress.Commands', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:8080/cypress-api')
+    cy.visit('https://example.cypress.io/cypress-api')
   })
 
   // https://on.cypress.io/custom-commands
@@ -18,7 +18,6 @@ context('Cypress.Commands', () => {
       method = method || 'log'
 
       // log the subject to the console
-      // eslint-disable-next-line no-console
       console[method]('The subject is', subject)
 
       // whatever we return becomes the new subject
@@ -27,7 +26,6 @@ context('Cypress.Commands', () => {
       return subject
     })
 
-    // eslint-disable-next-line no-unused-vars
     cy.get('button').console('info').then(($button) => {
       // subject is still $button
     })
@@ -36,7 +34,7 @@ context('Cypress.Commands', () => {
 
 context('Cypress.Cookies', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:8080/cypress-api')
+    cy.visit('https://example.cypress.io/cypress-api')
   })
 
   // https://on.cypress.io/cookies
@@ -73,7 +71,7 @@ context('Cypress.Cookies', () => {
 
 context('Cypress.arch', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:8080/cypress-api')
+    cy.visit('https://example.cypress.io/cypress-api')
   })
 
   it('Get CPU architecture name of underlying OS', () => {
@@ -84,7 +82,7 @@ context('Cypress.arch', () => {
 
 context('Cypress.config()', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:8080/cypress-api')
+    cy.visit('https://example.cypress.io/cypress-api')
   })
 
   it('Get and set configuration options', () => {
@@ -114,7 +112,7 @@ context('Cypress.config()', () => {
 
 context('Cypress.dom', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:8080/cypress-api')
+    cy.visit('https://example.cypress.io/cypress-api')
   })
 
   // https://on.cypress.io/dom
@@ -130,7 +128,7 @@ context('Cypress.dom', () => {
 
 context('Cypress.env()', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:8080/cypress-api')
+    cy.visit('https://example.cypress.io/cypress-api')
   })
 
   // We can set environment variables for highly dynamic values
@@ -159,7 +157,7 @@ context('Cypress.env()', () => {
 
 context('Cypress.log', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:8080/cypress-api')
+    cy.visit('https://example.cypress.io/cypress-api')
   })
 
   it('Control what is printed to the Command Log', () => {
@@ -169,7 +167,7 @@ context('Cypress.log', () => {
 
 context('Cypress.platform', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:8080/cypress-api')
+    cy.visit('https://example.cypress.io/cypress-api')
   })
 
   it('Get underlying OS name', () => {
@@ -180,7 +178,7 @@ context('Cypress.platform', () => {
 
 context('Cypress.version', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:8080/cypress-api')
+    cy.visit('https://example.cypress.io/cypress-api')
   })
 
   it('Get current version of Cypress being run', () => {
@@ -191,7 +189,7 @@ context('Cypress.version', () => {
 
 context('Cypress.spec', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:8080/cypress-api')
+    cy.visit('https://example.cypress.io/cypress-api')
   })
 
   it('Get current spec information', () => {

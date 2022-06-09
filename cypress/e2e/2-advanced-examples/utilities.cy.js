@@ -2,7 +2,7 @@
 
 context('Utilities', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:8080/utilities')
+    cy.visit('https://example.cypress.io/utilities')
   })
 
   it('Cypress._ - call a lodash method', () => {
@@ -30,7 +30,7 @@ context('Utilities', () => {
     cy.get('.utility-blob').then(($div) => {
       // https://github.com/nolanlawson/blob-util#imgSrcToDataURL
       // get the dataUrl string for the javascript-logo
-      return Cypress.Blob.imgSrcToDataURL('/assets/img/javascript-logo.png', undefined, 'anonymous')
+      return Cypress.Blob.imgSrcToDataURL('https://example.cypress.io/assets/img/javascript-logo.png', undefined, 'anonymous')
       .then((dataUrl) => {
         // create an <img> element and set its src to the dataUrl
         let img = Cypress.$('<img />', { src: dataUrl })
@@ -85,7 +85,6 @@ context('Utilities', () => {
      */
     function waitOneSecond () {
       // return a promise that resolves after 1 second
-      // eslint-disable-next-line no-unused-vars
       return new Cypress.Promise((resolve, reject) => {
         setTimeout(() => {
           // set waited to true

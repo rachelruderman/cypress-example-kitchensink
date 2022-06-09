@@ -5,7 +5,7 @@
 context('Spies, Stubs, and Clock', () => {
   it('cy.spy() - wrap a method in a spy', () => {
     // https://on.cypress.io/spy
-    cy.visit('http://localhost:8080/commands/spies-stubs-clocks')
+    cy.visit('https://example.cypress.io/commands/spies-stubs-clocks')
 
     const obj = {
       foo () {},
@@ -19,7 +19,7 @@ context('Spies, Stubs, and Clock', () => {
   })
 
   it('cy.spy() retries until assertions pass', () => {
-    cy.visit('http://localhost:8080/commands/spies-stubs-clocks')
+    cy.visit('https://example.cypress.io/commands/spies-stubs-clocks')
 
     const obj = {
       /**
@@ -27,7 +27,6 @@ context('Spies, Stubs, and Clock', () => {
        * @param x {any}
       */
       foo (x) {
-        /* eslint-disable-next-line no-console */
         console.log('obj.foo called with', x)
       },
     }
@@ -47,7 +46,7 @@ context('Spies, Stubs, and Clock', () => {
 
   it('cy.stub() - create a stub and/or replace a function with stub', () => {
     // https://on.cypress.io/stub
-    cy.visit('http://localhost:8080/commands/spies-stubs-clocks')
+    cy.visit('https://example.cypress.io/commands/spies-stubs-clocks')
 
     const obj = {
       /**
@@ -56,7 +55,6 @@ context('Spies, Stubs, and Clock', () => {
        * @param b {string}
       */
       foo (a, b) {
-        // eslint-disable-next-line no-console
         console.log('a', a, 'b', b)
       },
     }
@@ -76,7 +74,7 @@ context('Spies, Stubs, and Clock', () => {
     const now = new Date(Date.UTC(2017, 2, 14)).getTime()
 
     cy.clock(now)
-    cy.visit('http://localhost:8080/commands/spies-stubs-clocks')
+    cy.visit('https://example.cypress.io/commands/spies-stubs-clocks')
     cy.get('#clock-div').click()
       .should('have.text', '1489449600')
   })
@@ -89,7 +87,7 @@ context('Spies, Stubs, and Clock', () => {
     const now = new Date(Date.UTC(2017, 2, 14)).getTime()
 
     cy.clock(now)
-    cy.visit('http://localhost:8080/commands/spies-stubs-clocks')
+    cy.visit('https://example.cypress.io/commands/spies-stubs-clocks')
     cy.get('#tick-div').click()
       .should('have.text', '1489449600')
 
