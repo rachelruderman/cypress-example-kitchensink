@@ -1,9 +1,8 @@
 const { defineConfig } = require('cypress')
 
 module.exports = defineConfig({
-  projectId: '1bg4ct',
   e2e: {
-    baseUrl: 'https://example.cypress.io',
+    baseUrl: 'https://github.com',
     // We've imported your old cypress plugins here.
     // You may want to clean this up later by importing these.
     setupNodeEvents(on, config) {
