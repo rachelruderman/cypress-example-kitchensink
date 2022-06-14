@@ -1,5 +1,5 @@
 # GitHub issue
-#21805
+[#22273](https://github.com/cypress-io/cypress/issues/22273)
 # How to reproduce
 
 1. `yarn`
