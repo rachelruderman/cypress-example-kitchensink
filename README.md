@@ -1,4 +1,6 @@
-# How to test
+# GitHub issue
+#21805
+# How to reproduce
 
 1. `yarn`
 2. `npx cypress open`
